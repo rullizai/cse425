@@ -122,11 +122,11 @@ int main()
               stk[i]=a[j];
               stk[i+1]='\0';
               a[j]=' ';
-              printf("\t%ssymbols",act);
+              printf("\t%s %c",act,stk[i]);
               printf("\n$%s\t%s$",stk,a);
               check();
            }
-            /*if(stk[0] == 'S-' && stk[1] == '\0'){
+            /*if(stk[0] == 'S' && stk[1] == '\0'){
         printf("Accept\n");
             }
     else //else reject
