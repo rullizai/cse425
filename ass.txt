@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
-int k=0,z=0,i=0,j=0,c=0;
-char a[16],ac[20],stk[15],act[10],al[20],ah[20],ax[20];
+int z=0,i=0,j=0,c=0;
+char a[20],ac[20],stk[20],act[10],al[20],ah[20],ax[20];
 void check()
    {
      strcpy(ac,"REDUCE BY S->a");
@@ -31,7 +31,7 @@ void check()
            printf("\n$%s\t%s$",stk,a);
            j++;
          }
-    strcpy(al,"REDUCE BY S->S+S");
+    /*strcpy(al,"REDUCE BY S->S+S");
      for(z=0; z<c; z++)
      {
 
@@ -45,7 +45,7 @@ void check()
            printf("\n$%s\t%s$",stk,a);
            i=i-2;
          }
-     }
+     }*/
      strcpy(al,"REDUCE BY S->S+S");
      for(z=0; z<c; z++)
      {
@@ -89,14 +89,14 @@ void check()
 int main()
    {
 
-      printf("GRAMMAR is\n S->S+S \n S->S-S \n S->(S) \n S->a\n");
+      printf("The grammar is\n S->S+S \n S->S-S \n S->(S) \n S->a\n");
       strcpy(a,"a1-(a2+a3)");
       c=strlen(a);
       strcpy(act,"SHIFT->");
-      printf("Stack\t  Input\t\tAction");
+      printf("Stack\t  Input\t\tAction\n");
       printf("\n$\t%s$\t", a);
 
-      for(k=0,i=0; j<c; k++,i++,j++)
+      for(i=0; j<c; i++,j++)
        {
          if(a[j]=='a' && a[j+1]=='1')
            {
@@ -125,8 +125,8 @@ int main()
            {
               stk[i]=a[j];
               stk[i+1]=a[j+1];
-              stk[i+2]=a[j+2];
-              stk[i+3]='\0';
+             // stk[i+2]=a[j+2];
+              stk[i+2]='\0';
               a[j]=' ';
               a[j+1]=' ';
               //a[j+2]=' ';
@@ -164,7 +164,7 @@ int main()
             }
     else
         {
-            printf("Reject\n");
+            printf("\tReject\n");
 
 }
 
