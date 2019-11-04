@@ -41,7 +41,8 @@ void check()
            stk[z]='S';
            stk[z+1]='\0';
            stk[z+2]='\0';
-           printf("\n$%s\t%s$\t%s",stk,a,al);
+           printf("\t%s",al);
+           printf("\n$%s\t%s$",stk,a);
            i=i-2;
          }
      }
@@ -52,7 +53,8 @@ void check()
            stk[z]='S';
            stk[z+1]='\0';
            stk[z+2]='\0';
-           printf("\n$%s\t%s$\t%s",stk,a,ah);
+           printf("\t%s",ah);
+           printf("\n$%s\t%s$",stk,a);
            i=i-2;
          }
          }
@@ -63,7 +65,8 @@ void check()
            stk[z]='S';
            stk[z+1]='\0';
            stk[z+2]='\0';
-           printf("\n$%s\t%s$\t%s",stk,a,ax);
+           printf("\t%s",ax);
+           printf("\n$%s\t%s$",stk,a);
            i=i-2;
          }
      }
