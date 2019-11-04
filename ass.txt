@@ -46,6 +46,21 @@ void check()
            i=i-2;
          }
      }
+     strcpy(al,"REDUCE BY S->S+S");
+     for(z=0; z<c; z++)
+     {
+
+
+       if(stk[z]=='S' && stk[z+1]=='+' && stk[z+2]=='S')
+         {
+           stk[z]='S';
+           stk[z+1]='\0';
+           stk[z+2]='\0';
+           printf("\t%s",al);
+           printf("\n$%s\t%s$",stk,a);
+           i=i-2;
+         }
+     }
      strcpy(ah,"REDUCE BY S->S-S");
      for(z=0; z<c; z++){
        if(stk[z]=='S' && stk[z+1]=='-' && stk[z+2]=='S')
@@ -141,15 +156,17 @@ int main()
               printf("\n$%s\t%s$",stk,a);
               check();
            }
-            /*if(stk[0] == 'S' && stk[1] == '\0'){
-        printf("Accept\n");
+
+       }
+       check();
+       if(stk[0] == 'S' && stk[1] == '\0'){
+        printf("\tAccept\n");
             }
-    else //else reject
+    else
         {
             printf("Reject\n");
 
-}*/
-       }
+}
 
    }
 
