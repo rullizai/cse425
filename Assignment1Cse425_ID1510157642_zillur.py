@@ -1,3 +1,7 @@
+# Name  : Md. Zillur Rahman
+# ID    : 151 01 57 642
+# Sec   : 04
+
 print("The Given Matrix Is : ")
 Y = [[1, 5, 1, 5, 1, 5],
      [3, 3, 2, 3, 3, 4],
