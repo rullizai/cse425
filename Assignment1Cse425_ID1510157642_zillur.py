@@ -1,9 +1,12 @@
-# Name  : Md. Zillur Rahman
-# ID    : 151 01 57 642
-# Sec   : 04
-print("The Dimension is")
-a=input()
-b=input()
+# Name      : Md. Zillur Rahman
+# ID        : 151 01 57 642
+# Sec       : 04
+# Assignment: 01
+
+print("Please Enter The Desired Grid Dimensions ")
+a = int(input())
+b = int(input())
+
 print("The Given Matrix Is : ")
 Y = [[1, 5, 1, 5, 1, 5],
      [3, 3, 2, 3, 3, 4],
@@ -12,11 +15,14 @@ Y = [[1, 5, 1, 5, 1, 5],
      [2, 2, 4, 3, 4, 2],
      [4, 4, 4, 4, 2, 3]]
 
+for k in range(len(Y)):
+    for m in range(len(Y[k])):
+        Y[k][m] = int(input())
+
 for p in range(len(Y)):
     for q in range(len(Y[p])):
         print(Y[p][q], end=" ")
     print()
-
 
 largest = []
 
@@ -43,11 +49,11 @@ for i in range(len(Y)):
 
         else:
             if (Y[i][j]) * (Y[i - 1][j - 1]) >= (Y[i][j]) * (Y[i - 1][j]) and (Y[i][j]) * (Y[i - 1][j - 1]) >= (
-            Y[i][j]) * (Y[i - 1][j + 1]):
+                    Y[i][j]) * (Y[i - 1][j + 1]):
                 Y[i][j] = (Y[i][j]) * (Y[i - 1][j - 1])
                 largest.append(Y[i][j])
             elif (Y[i][j]) * (Y[i - 1][j]) >= (Y[i][j]) * (Y[i - 1][j - 1]) and (Y[i][j]) * (Y[i - 1][j]) >= (
-            Y[i][j]) * (Y[i - 1][j + 1]):
+                    Y[i][j]) * (Y[i - 1][j + 1]):
                 Y[i][j] = (Y[i][j]) * (Y[i - 1][j])
                 largest.append(Y[i][j])
             else:
@@ -65,7 +71,6 @@ for p in range(len(Y)):
 print()
 print("The Maximum Value Is : ", max(largest))
 print()
-
 
 X = [[1, 5, 1, 5, 1, 5],
      [3, 3, 2, 3, 3, 4],
@@ -95,10 +100,10 @@ for i in range(len(Y)):
 
         else:
             if (Y[i][j]) * (Y[i - 1][j - 1]) <= (Y[i][j]) * (Y[i - 1][j]) and (Y[i][j]) * (Y[i - 1][j - 1]) <= (
-            Y[i][j]) * (Y[i - 1][j + 1]):
+                    Y[i][j]) * (Y[i - 1][j + 1]):
                 Y[i][j] = (Y[i][j]) * (Y[i - 1][j - 1])
             elif (Y[i][j]) * (Y[i - 1][j]) <= (Y[i][j]) * (Y[i - 1][j - 1]) and (Y[i][j]) * (Y[i - 1][j]) <= (
-            Y[i][j]) * (Y[i - 1][j + 1]):
+                    Y[i][j]) * (Y[i - 1][j + 1]):
                 Y[i][j] = (Y[i][j]) * (Y[i - 1][j])
             else:
                 Y[i][j] = (Y[i][j]) * (Y[i - 1][j + 1])
@@ -107,7 +112,6 @@ for i in range(len(Y)):
             minimum.append(Y[i][j])
 
 print("The Transformed Matrix Is : ")
-
 
 for p in range(len(Y)):
     for q in range(len(Y[p])):
