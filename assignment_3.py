@@ -150,12 +150,12 @@ for student_attendence in student_attendence_set:
         student_attendence["marks"] = 2
 
 print("Calculated Attendance Percentage")
-print("No.\t\tName\t\t\tID\t\t\tPercentage\t\tMarks")
+print("No.\t\tName\t\tID\t\t\tPercentage\t\tMarks")
 
 count = 1
 
 for student_attendence in student_attendence_set:
-    print("{}{}{}\t\t\t\t{}\t\t{}".format(count, student_attendence["name"].rjust(24), student_attendence["id"].rjust(20), student_attendence["percentage"], student_attendence["marks"]))
+    print("{}{}{}\t\t\t{}\t\t{}".format(count, student_attendence["name"].rjust(24), student_attendence["id"].rjust(20), student_attendence["percentage"], student_attendence["marks"]))
     count = count + 1
 
 
@@ -180,7 +180,7 @@ print("No.\tPercentage\tCount")
 count = 1
 
 for student_attendence in attendance_count.keys():
-    print("{}\t{}\t\t{}\t".format(count, student_attendence, attendance_count[student_attendence]))
+    print("{}\t{}\t{}\t".format(count, student_attendence, attendance_count[student_attendence]))
     count = count + 1
 
 
